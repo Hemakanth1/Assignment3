@@ -1,0 +1,144 @@
+//Q1
+object MyClass {
+    def chkPrime(n: Int): Int={
+        var a=0;
+        var fl=1;
+        
+        for(a <- 2 to n/2){
+            if (n % a == 0) {
+            fl = 0;
+            
+        }
+        }
+         fl
+
+    }
+    
+    
+    def main(args: Array[String]) {
+    
+            if(chkPrime(8)==1){
+                print("true")
+            }
+            else{
+                print("false")
+            }
+        
+    }
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////
+//Q2
+object MyClass {
+    def chkPrime(n: Int): Int={
+        var a=0;
+        var fl=1;
+        
+        for(a <- 2 to n/2){
+            if (n % a == 0) {
+            fl = 0;
+            
+        }
+        }
+         fl
+
+    }
+    def Prime(n: Int){
+                var i=1;
+        var flag=0;
+        
+        for (i <- 2 to 10){
+            flag=chkPrime(i);
+            
+                  if (flag == 1){
+            printf("%d ", i);
+    }
+        }
+    }
+    
+    
+    def main(args: Array[String]) {
+
+        Prime(10);
+    }
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Q3
+object MyClass {
+    def getAddition(n: Int): Int={
+        
+        if(n!=0){
+           n + getAddition(n-1)
+        }
+        else{
+          n
+          
+        }
+    }
+    
+    def main(args: Array[String]) {
+        
+        println(getAddition(5))
+    }
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Q5
+object MyClass {
+    def evenAddition(n: Int): Int={
+        
+        if(n!=0){
+            if(n%2==0){
+               n + evenAddition(n-2)  
+            }
+            else{
+                var a=0;
+                a=n-1
+                 a +evenAddition(a-2)
+            }
+           
+        }
+        else{
+          n
+          
+        }
+    }
+    
+    def main(args: Array[String]) {
+        
+        println(evenAddition(8))
+    }
+}
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Q6
+object MyClass {
+    def fibonacci(n: Int): Int={
+        
+        if(n<=0 || n==1){
+           n
+        }
+        else{
+          fibonacci(n-1) + fibonacci(n-2)
+          
+        }
+    }
+    
+    def main(args: Array[String]) {
+        var a=0;
+        var i=0;
+        for (a <- 1 to 5){
+            print(fibonacci(i));
+            i=i+1
+        }
+       
+    }
+}
